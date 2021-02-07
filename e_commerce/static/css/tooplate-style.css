@@ -27,8 +27,8 @@ a:focus {
 .tm-margin-b-20 { margin-bottom: 20px; }
 .tm-p-4 { padding: 2rem!important; }
 .tm-color-white { color: white; }
-.tm-color-primary {	color: #2e94a6; }
-.tm-bg-primary { background: #2e94a6; }
+.tm-color-primary {	color: #d53239; }
+.tm-bg-primary { background: #d53239; }
 .tm-bg-gray { background: #F4F4F4; }
 .tm-bg-white { background: white; }
 .tm-bg-dark-blue { background: #1f3646; }
@@ -96,7 +96,7 @@ p {
 .nav-link.active,
 .nav-link:hover {
 	color: white;
-	background: #2e94a6;	
+	background: #d53239;	
 }
 
 .tm-top-bar .navbar-expand-lg .navbar-nav .nav-link { padding: 50px 35px; }
@@ -111,6 +111,10 @@ p {
     transition: all 0.2s ease-in-out;
     height: 119px;
     background: white;
+}
+
+.checked {
+  color: orange;
 }
 
 .tm-top-bar.active {
@@ -170,13 +174,13 @@ p {
 }
 
 .form-control:focus {
-	border-color: #2e94a6;
+	border-color: #d53239;
 	box-shadow: 0 0 0 0.2rem rgba(238,80,87,.25);
 }
 
 .btn-primary {
-	background-color: #2e94a6;
-	border-color: #2e94a6;
+	background-color: #d53239;
+	border-color: #d53239;
 	border-radius: 0;
 	cursor: pointer;
 	font-size: 0.7rem;
@@ -197,7 +201,7 @@ p {
 .tm-form-element:last-child { margin-right: 0; }
 
 .tm-form-element-icon {
-	color: #2e94a6;
+	color: #d53239;
 	position: absolute;
 	top: 5px;
 	left: 15px;
@@ -260,7 +264,7 @@ img.resize-globe{
 .tm-pb-4 { padding-bottom: 100px; }
 
 .tm-section-2 {
-	background: #2e94a6;
+	background: #d53239;
 	padding-top: 50px;
 	position: relative;
 }
@@ -293,7 +297,7 @@ img.resize-globe{
 
 .tm-btn-white-bordered:hover,
 .tm-btn-white-bordered:focus {
-	color: #2e94a6;
+	color: #d53239;
 	background: white;	
 }
 
@@ -353,7 +357,7 @@ img.resize-globe{
 	transition: all 0.3s ease;
 }
 
-.tm-recommended-item:hover h4 { color: #2e94a6; }
+.tm-recommended-item:hover h4 { color: #d53239; }
 .tm-media { align-items: stretch; }
 
 .tm-media,
@@ -576,6 +580,75 @@ video {
 @media all and (max-width: 600px) {
 	.ie-container-width-fix-2 { width: 100%; }
 }
+.chat-popup {
+	display: none;
+	position: fixed;
+	bottom: 0;
+	right: 15px;
+	border: 3px solid #f1f1f1;
+	z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+	max-width: 300px;
+	padding: 10px;
+	background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .form-container textarea {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	border: none;
+	background: #f1f1f1;
+	resize: none;
+	min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+	background-color: #ddd;
+	outline: none;
+  }
+  
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+	background-color: #4CAF50;
+	color: white;
+	padding: 16px 20px;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	margin-bottom:10px;
+	opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+	background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+	opacity: 1;
+  }
+  #myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: rgba(14, 55, 131, 0.945);
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 4px;
+  }
 
 @media all and (max-width: 560px)  and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.ie-container-width-fix {

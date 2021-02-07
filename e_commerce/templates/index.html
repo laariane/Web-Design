@@ -165,7 +165,7 @@ http://www.tooplate.com/view/2095-level
 
             <div class="tm-section tm-position-relative">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none" class="tm-section-down-arrow">
-                    <polygon fill="#2e94a6" points="0,0  100,0  50,60"></polygon>
+                    <polygon fill="#d53239" points="0,0  100,0  50,60"></polygon>
                 </svg>
                 <div class="container tm-pt-5 tm-pb-4">
                     <div class="row text-center">
@@ -199,7 +199,14 @@ http://www.tooplate.com/view/2095-level
                                 <article class="tm-bg-white mr-2 tm-carousel-item">
                                     <img src="{%static 'img/img-01.jpg'%}" alt="Image" class="img-fluid">
                                     <div class="tm-article-pad">
-                                        <header><h3 class="text-uppercase tm-article-title-2">Los angeles</h3></header>
+                                        <header><h3 class="text-uppercase tm-article-title-2">Los angeles</h3>
+                            
+                                        </header>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
                                         <p>Los Angeles, ville tentaculaire en Californie du Sud, est le cœur de l'industrie cinématographique et télévisuelle. Non loin du panneau Hollywood, les studios Paramount Pictures, Universal et Warner Brothers proposent des visites pour découvrir leurs installations. Sur Hollywood Boulevard, devant le Grauman's Chinese Theatre, les plus grandes stars du cinéma ont laissé leurs empreintes de pieds et de mains dans le ciment</p>
                                         <a href="#" class="text-uppercase btn-primary tm-btn-primary">Get More Info.</a>
                                     </div>
@@ -208,6 +215,11 @@ http://www.tooplate.com/view/2095-level
                                     <img src="{%static 'img/img-02.jpg'%}" alt="Image" class="img-fluid">
                                     <div class="tm-article-pad">
                                         <header><h3 class="text-uppercase tm-article-title-2">New York</h3></header>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star checked"></span>
+                                        <span class="fa fa-star"></span>
                                         <p>New York est une ville composée de 5 arrondissements à l'embouchure du fleuve Hudson et de l'océan Atlantique. En son centre se trouve Manhattan, un arrondissement densément peuplé faisant partie des principaux centres commerciaux, financiers et culturels du monde. Ses sites incontournables comprennent des gratte-ciel comme l'Empire State Building et l'immense Central Park. Le théâtre de Broadway est situé sur Times Square.</p>
                                         <a href="#" class="text-uppercase btn-primary tm-btn-primary">View Detail</a>
                                     </div>
@@ -251,6 +263,19 @@ http://www.tooplate.com/view/2095-level
                         </div>
                     </div>
                 </div>
+            </div>
+            <button class="open-button" id="myBtn" onclick="openForm()">customer service</button>
+
+            <div class="chat-popup" id="myForm">
+              <form action="/" class="form-container">
+                <h1>how can we help you</h1>
+            
+                <label for="msg"><b>Message</b></label>
+                <textarea placeholder="Type message.." name="msg" required></textarea>
+            
+                <button type="submit" class="btn">Send</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
             </div>
 
             <div class="tm-bg-video">
@@ -351,6 +376,7 @@ http://www.tooplate.com/view/2095-level
                 </div>
             </footer>
         </div>
+    
 
         <!-- load JS files -->
         <script src="{%static 'js/jquery-1.11.3.min.js'%}"></script>             <!-- jQuery (https://jquery.com/download/) -->
@@ -359,6 +385,29 @@ http://www.tooplate.com/view/2095-level
         <script src="{%static 'js/datepicker.min.js'%}"></script>                <!-- https://github.com/qodesmith/datepicker -->
         <script src="{%static 'js/jquery.singlePageNav.min.js'%}"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
         <script src="{%static 'slick/slick.min.js'%}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
+        <script>
+                 var mybutton = document.getElementById("myBtn");
+
+                // When the user scrolls down 20px from the top of the document, show the button
+                window.onscroll = function() {scrollFunction()};
+
+                function scrollFunction() {
+                if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+                    mybutton.style.display = "block";
+                } else {
+                    mybutton.style.display = "none";
+                }
+                }
+                function openForm() {
+              document.getElementById("myForm").style.display = "block";
+              mybutton.style.display="none";
+            }
+            
+            function closeForm() {
+              document.getElementById("myForm").style.display = "none";
+              scrollFunction;
+            }
+        </script>
         <script>
 
             /* Google map
