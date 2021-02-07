@@ -387,25 +387,18 @@ http://www.tooplate.com/view/2095-level
         <script src="{%static 'slick/slick.min.js'%}"></script>                  <!-- http://kenwheeler.github.io/slick/ -->
         <script>
                  var mybutton = document.getElementById("myBtn");
+                 mybutton.style.display="block"
 
                 // When the user scrolls down 20px from the top of the document, show the button
-                window.onscroll = function() {scrollFunction()};
-
-                function scrollFunction() {
-                if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-                    mybutton.style.display = "block";
-                } else {
-                    mybutton.style.display = "none";
-                }
-                }
-                function openForm() {
+               
+              function openForm() {
               document.getElementById("myForm").style.display = "block";
               mybutton.style.display="none";
             }
             
             function closeForm() {
               document.getElementById("myForm").style.display = "none";
-              scrollFunction;
+              mybutton.style.display="block"
             }
         </script>
         <script>
